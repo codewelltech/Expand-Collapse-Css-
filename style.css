@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  background: #7c7a7a;
+  overflow-y: auto;
+}
+.container {
+  height: inherit;
+  width: inherit;
+  display: flex;
+  justify-content: space-around;
+  overflow: hidden;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  color: #fff;
+}
+.container > * {
+  align-self: flex-start;
+}
+h3 {
+  padding-left: 15px;
+  letter-spacing: 1px;
+}
+
+.box {
+  width: 400px;
+  color: black;
+  margin: 10px;
+  overflow: hidden;
+}
+
+.title,
+.content {
+  padding: 15px 30px;
+  transition: all 350ms ease-in-out;
+}
+.title {
+  border-bottom: 1px solid #1f1f1f;
+  background: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.content {
+  font-size: 0.9rem;
+  height: 150px;
+  overflow: hidden;
+}
+
+.example1.content {
+  background: #fff;
+  visibility: visible;
+}
+
+.example1.title:hover + .example1.content {
+  visibility: hidden;
+}
+
+.example2.content {
+  background: rgb(26, 25, 25);
+  opacity: 1;
+  color: #fff;
+}
+
+.example2.title:hover + .example2.content {
+  opacity: 0;
+}
+.example3.title {
+  cursor: pointer;
+}
+.example3.content {
+  background: rgb(29, 8, 223);
+  opacity: 1;
+  color: #fff;
+  transform: scaleY(1);
+  transform-origin: top;
+}
+
+.example4.content {
+  background: rgb(22, 207, 106);
+  opacity: 1;
+  color: #fff;
+  display: block;
+}
+
+.example3.content.toggle {
+  height: 0;
+  padding: 0;
+  opacity: 0;
+  transform: scaleY(0);
+}
+
+.example2.title:hover + .example2.content {
+  opacity: 0;
+}
+
+.example4.content.toggle-display {
+  opacity: 0;
+  display: none;
+}
